@@ -73,4 +73,4 @@ This project is for demonstration and educational purposes only. It is **not aff
 
 ---
 
-© 2024 Government of India (Replica Demo). All rights reserved.
+© 2025 Government of India (Replica Demo). All rights reserved.
