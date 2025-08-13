@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import type { PanData } from "@/lib/validation"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -10,8 +11,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Loader2, ArrowLeft, CheckCircle } from "lucide-react"
 
 interface PanVerificationStepProps {
-  formData: any
-  onComplete: (data: any) => void
+  formData: PanData
+  onComplete: (data: PanData) => void
   onPrevious: () => void
 }
 

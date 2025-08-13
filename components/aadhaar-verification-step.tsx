@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import type { AadhaarData } from "@/lib/validation"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -10,8 +11,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Loader2, Send, Shield } from "lucide-react"
 
 interface AadhaarVerificationStepProps {
-  formData: any
-  onComplete: (data: any) => void
+  formData: AadhaarData & { otp: string }
+  onComplete: (data: AadhaarData & { otp: string }) => void
 }
 
 export function AadhaarVerificationStep({ formData, onComplete }: AadhaarVerificationStepProps) {

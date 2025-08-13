@@ -5,11 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress"
 import { AadhaarVerificationStep } from "@/components/aadhaar-verification-step"
 import { PanVerificationStep } from "@/components/pan-verification-step"
+import type { UdyamFormData, PanData, AadhaarData } from "@/lib/validation"
 import { Badge } from "@/components/ui/badge"
 
 export default function UdyamRegistrationForm() {
   const [currentStep, setCurrentStep] = useState(1)
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<UdyamFormData>({
     aadhaar_number: "",
     mobile_number: "",
     otp: "",
@@ -21,7 +22,7 @@ export default function UdyamRegistrationForm() {
   const totalSteps = 2
   const progressPercentage = (currentStep / totalSteps) * 100
 
-  const handleStepComplete = (stepData: any) => {
+  const handleStepComplete = (stepData: Partial<UdyamFormData>) => {
     setFormData((prev) => ({ ...prev, ...stepData }))
     if (currentStep < totalSteps) {
       setCurrentStep((prev) => prev + 1)
