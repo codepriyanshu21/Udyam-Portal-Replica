@@ -107,7 +107,7 @@ export default function UdyamRegistrationForm() {
 
         {/* Footer */}
         <div className="text-center mt-6 text-xs text-gray-500">
-          <p>© 2024 Government of India. All rights reserved.</p>
+          <p>© 2025 Government of India. All rights reserved.</p>
           <p className="mt-1">This is a replica for demonstration purposes only.</p>
         </div>
       </div>
