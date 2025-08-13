@@ -1,0 +1,83 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "title": "Aadhaar Verification",
+      "description": "Enter your Aadhaar number and verify with OTP",
+      "fields": [
+        {
+          "name": "aadhaar_number",
+          "label": "Aadhaar Number",
+          "type": "text",
+          "required": true,
+          "pattern": "^\\d{4}\\s?\\d{4}\\s?\\d{4}$",
+          "placeholder": "Enter 12-digit Aadhaar number",
+          "maxlength": "14"
+        },
+        {
+          "name": "mobile_number",
+          "label": "Mobile Number",
+          "type": "tel",
+          "required": true,
+          "pattern": "^[6-9]\\d{9}$",
+          "placeholder": "Enter 10-digit mobile number",
+          "maxlength": "10"
+        },
+        {
+          "name": "otp",
+          "label": "OTP",
+          "type": "text",
+          "required": true,
+          "pattern": "^\\d{6}$",
+          "placeholder": "Enter 6-digit OTP",
+          "maxlength": "6"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "PAN Verification",
+      "description": "Enter your PAN details for verification",
+      "fields": [
+        {
+          "name": "pan_number",
+          "label": "PAN Number",
+          "type": "text",
+          "required": true,
+          "pattern": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+          "placeholder": "Enter PAN number (e.g., ABCDE1234F)",
+          "maxlength": "10"
+        },
+        {
+          "name": "name_as_per_pan",
+          "label": "Name as per PAN",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter name exactly as per PAN card"
+        },
+        {
+          "name": "date_of_birth",
+          "label": "Date of Birth",
+          "type": "date",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "validation_rules": {
+    "aadhaar_pattern": "^\\d{4}\\s?\\d{4}\\s?\\d{4}$",
+    "pan_pattern": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+    "otp_pattern": "^\\d{6}$",
+    "mobile_pattern": "^[6-9]\\d{9}$"
+  },
+  "ui_components": {
+    "primary_color": "#1e40af",
+    "secondary_color": "#64748b",
+    "success_color": "#16a34a",
+    "error_color": "#dc2626",
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-700 text-white",
+      "secondary": "bg-gray-200 hover:bg-gray-300 text-gray-900"
+    }
+  }
+}
